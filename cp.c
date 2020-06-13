@@ -6,6 +6,7 @@
 
 /*
  * 1. while (bytes_read = read(...) > 0) was not working correctly, how is this expression evaluated?
+ *    - read(...) > 0 will evaluate 1st to 1 and will copy to bytes_read, the while expression will test positive but only 1 byte will be writted
  * 2. if 'dest' is opened without 'mode' param, its attributes will be set to ---- but i will still be able to remove and read it, how is this possible?
  */
 
