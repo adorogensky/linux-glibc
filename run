@@ -4,9 +4,9 @@ arg1_no_ext="${1%%.*}"
 
 case "$arg1_ext" in
   c)
-    gcc $1 && ./a.out ${@:2}
+    gcc $1 && time ./a.out ${@:2}
     ;;
   java)
-    javac $1 && java $arg1_no_ext ${@:2}
+    javac $1 && time java $arg1_no_ext ${@:2}
     ;;
 esac
